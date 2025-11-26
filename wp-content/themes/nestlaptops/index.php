@@ -73,7 +73,7 @@
                                             <a href="#"><span class="label label-primary">Lenovo</span></a>
                                         </div>
                                         <h3>Lenovo Ideapad 310-15ISK</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eum laborum voluptas esse inventore necessitatibus </p>
+                                        <p>Lorem ipsum dolorr sit ame, consectetur adipisicing elit. Repudiandae eum laborum voluptas esse inventore necessitatibus </p>
 
                                         <div class="large-post-meta">
                                             <span><i class="fa fa-clock-o"></i> 21 March 2016</span>
