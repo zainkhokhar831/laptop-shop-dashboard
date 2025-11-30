@@ -61,4 +61,13 @@
         add_action( 'after_setup_theme', 'nestlaptops_setup' );
     }
 
+
+    /* 4.0 DISPLAY META INFORMATION FOR A SPECIFIC POST. */
+    if ( !function_exists('nestlaptops_post_meta' ) ) {
+        function nestlaptops_post_meta(){
+            
+        }
+    }
+
+
 ?>

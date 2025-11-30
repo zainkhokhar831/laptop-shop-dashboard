@@ -3,6 +3,10 @@
 <!-- end header here -->
 
         <div class="container sitecontainer bgw">
+
+        <?php get_template( 'template/news' )?>
+
+
             <div class="row hidden-xs">
                 <div class="col-md-12">
                     <div class="news-ticker clearfix">
