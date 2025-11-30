@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if lt IE 7 ]><html class="ie ie6" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- SITE META -->
-    <title>Techmag | Responsive Magazine Site Template</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
+    <meta name="author" content="Zain khokhar">
+    <meta name="keywords" content=" Dell, Samsung, Apple, hp laptops, dell laptops, compaq presario, hp dv6, hp pavilion, dell inspiron, hp compaq presario, hp mini">
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="<?php echo IMAGES ?>/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo IMAGES; ?>/apple-touch-icon-76x76.png">
@@ -25,22 +25,7 @@
 </head>
 
 <body>
-	<div class="left-menu hidden-sm hidden-md hidden-xs">
-        <ul class="dm-social">
-            <li class="facebookbg"><a href="#" class="fa fa-facebook" data-toggle="tooltip" data-placement="right" title="Facebook">Facebook</a></li>
-            <li class="googlebg"><a href="#" class="fa fa-google-plus" data-toggle="tooltip" data-placement="right" title="Google+">Google+</a></li>
-            <li class="twitterbg"><a href="#" class="fa fa-twitter" data-toggle="tooltip" data-placement="right" title="Twitter">Twitter</a></li>
-            <li class="pinterestbg"><a href="#" class="fa fa-pinterest" data-toggle="tooltip" data-placement="right" title="Pinterest">Pinterest</a></li>
-            <li class="linkedinbg"><a href="#" class="fa fa-linkedin" data-toggle="tooltip" data-placement="right" title="Linkedin">Linkedin</a></li>
-            <li class="rssbg"><a href="#" class="fa fa-rss" data-toggle="tooltip" data-placement="right" title="RSS">RSS</a></li>
-            <li class="share">
-                <a href="#" class="fa fa-share-alt" data-toggle="tooltip" data-placement="right" title="91k Share"></a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- START SITE -->
-
+	<!-- START SITE -->
     <div id="wrapper">
         <div class="logo-wrapper">
             <div class="container">
@@ -77,13 +62,14 @@
                         </div>
 						<!-- START TOP NAV  -->
                         <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Vission</a></li>
-                                <li><a href="#">Webmaster</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                            </ul>
+                            <?php 
+                                $args = [
+                                    'theme_location' => 'top-menu',
+                                    'container'      => 'ul',
+                                    'menu_class'     => 'nav navbar-nav',
+                                ];
+                                wp_nav_menu( $args )
+                            ?>
                             <ul class="nav navbar-nav navbar-right searchandbag">
                                 <li class="dropdown searchdropdown hasmenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></a>

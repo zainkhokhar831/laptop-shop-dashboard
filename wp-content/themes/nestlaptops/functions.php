@@ -32,4 +32,33 @@
         }
         add_action( 'wp_enqueue_scripts', 'nestlaptops_scripts' );
     }
+
+    /* 3.0 SET UP THEME DEFAULT AND REGISTER VARIOUS SUPPORTED FEATURES. */
+    if ( !function_exists( 'nestlaptops_setup' ) ) {
+        function nestlaptops_setup() {
+            // make the theme available for translation.
+            $lang_dir = THEMEROOT . '/assets/languages';
+            load_theme_textdomain( 'nestlaptops', $lang_dir );
+
+            // add support for automatic feed links.
+            add_theme_support( 'automatic-feed-links' );
+
+            // add support for post thumbnails and featured images.
+            add_theme_support( 'post-thumbnails' );
+
+            // add support for post formats.
+            add_theme_support( 'post-formats', [
+                'image','video','quote','gallery','audio',
+            ] );
+
+            // register navigation menus.
+            register_nav_menus([
+                'top-menu' => __( 'Top Navigation', 'nestlaptops') , 
+                'footer-menu' => __( 'Footer Navigation', 'nestlaptops')
+            ]);
+
+        }
+        add_action( 'after_setup_theme', 'nestlaptops_setup' );
+    }
+
 ?>
