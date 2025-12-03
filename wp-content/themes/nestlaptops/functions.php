@@ -76,7 +76,6 @@
             echo '<span><i class="fa fa-clock-o"></i> ' . esc_html( get_the_date() ) . '</span>';
             echo '<small class="hidden-xs">&#124;</small>';
 
-
             // get the author
              printf(
                 '<span><i class="fa fa-user"></i> <a href="%1$s">%2$s</a></span>',
@@ -114,16 +113,4 @@
         }
 
             }
-            
-        
-    
-
-
-// <div class="large-post-meta">
-//     <span><i class="fa fa-clock-o"></i> 21 March 2016</span>
-//     <small class="hidden-xs">&#124;</small>
-//     <span class="hidden-xs"><i class="fa fa-comments-o"></i> 92</span>
-//     <small class="hidden-xs">&#124;</small>
-//     <span class="hidden-xs"><i class="fa fa-eye"></i> 1223</span>
-// </div>
 ?>
