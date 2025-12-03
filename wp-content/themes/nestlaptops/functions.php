@@ -64,9 +64,59 @@
     /* 4.0 DISPLAY META INFORMATION FOR A SPECIFIC POST. */
     if ( !function_exists( 'nestlaptops_post_meta' ) ) {
         function nestlaptops_post_meta() {
+               echo '<div class="large-post-meta">';
             
+            // Sticky Post
+            if ( is_sticky() ) {
+                echo '<span><i class="fa fa-sticky-note-o"></i> ' . esc_html__( 'Sticky', 'nestlaptops' ) . '</span>';
+                echo '<small class="hidden-xs">&#124;</small>';
+            }
+                       
+            // get the date 
+            echo '<span><i class="fa fa-clock-o"></i> ' . esc_html( get_the_date() ) . '</span>';
+            echo '<small class="hidden-xs">&#124;</small>';
+
+
+            // get the author
+             printf(
+                '<span><i class="fa fa-user"></i> <a href="%1$s">%2$s</a></span>',
+                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                esc_html( get_the_author() )
+            );
+            echo '<small class="hidden-xs">&#124;</small>';
+
+            // Tags 
+            $tag_list = get_the_tag_list( '', ', ' );
+            if ( $tag_list ) {
+                echo '<span><i class="fa fa-tags"></i> ' . wp_kses_post( $tag_list ) . '</span>';
+                echo '<small class="hidden-xs">&#124;</small>';
+            }
+
+            // Comments
+             if ( comments_open() ) {
+                echo '<span class="hidden-xs"><i class="fa fa-comments-o"></i> ';
+                comments_popup_link( 
+                    __( 'No comment', 'nestlaptops' ), 
+                    __( 'One comment', 'nestlaptops' ), 
+                    __( 'View all % comments', 'nestlaptops' ) 
+                );
+                echo '</span>';
+                echo '<small class="hidden-xs">&#124;</small>';
+            }
+
+            // Edit links
+             if ( is_user_logged_in() ) {
+                echo '<span><i class="fa fa-pencil"></i> ';
+                edit_post_link( esc_html__( 'Edit Laptop', 'nestlaptops' ) );
+                echo '</span>';
+            }
+            echo '</div>';
         }
-    }
+
+            }
+            
+        
+    
 
 
 // <div class="large-post-meta">
