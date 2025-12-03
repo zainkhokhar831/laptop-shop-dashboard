@@ -12,7 +12,7 @@
     <!-- SITE META -->
     <title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
     <meta name="description" content="<?php bloginfo( 'description' ); ?>">
-    <meta name="author" content="Zain khokhar">
+    <meta name="author" content="Al-Fateem Academy">
     <meta name="keywords" content=" Dell, Samsung, Apple, hp laptops, dell laptops, compaq presario, hp dv6, hp pavilion, dell inspiron, hp compaq presario, hp mini">
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="<?php echo IMAGES ?>/favicon.ico" type="image/x-icon">
