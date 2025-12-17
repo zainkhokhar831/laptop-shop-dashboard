@@ -65,3 +65,11 @@ div.bbp-template-notice p,
     border-color: #0080c9 !important;
     color: #ffffff !important;
 }
+
+/* WP DEVELOPMENT */
+ul ul, ol ul, ul ol, ol ol {
+    margin-bottom: 0;
+    list-style-type: none;
+    margin-left: -40px;
+    margin-top: 30px;
+}

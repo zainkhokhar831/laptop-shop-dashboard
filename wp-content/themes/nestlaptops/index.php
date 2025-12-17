@@ -13,9 +13,16 @@
                     <!-- end property-slider -->
 
                     <div class="widget searchwidget indexslider">
-                      <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+                        <?php if ( have_posts() ) :  while( have_posts() ) : the_post(); ?>
                             <?php get_template_part( 'templates/content', get_post_format() ); ?>
                         <?php endwhile ?>
+                        <?php 
+                            // next/previous pagination
+                            // nestlaptops_paging_nav(); 
+                            
+                            // numbered pagination
+                            nestlaptops_numbered_pagination();
+                            ?>
                         <?php else : ?>
                             <?php get_template_part( 'templates/content-none' ); ?>
                         <?php endif?>
@@ -45,7 +52,7 @@
                 <!-- begin sidebar here -->
                  <?php get_sidebar(); ?>
                 <!-- end sidebar here -->
--
+
             </div>
             <!-- end row -->
         </div>

@@ -3,22 +3,9 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="widget">
-                            <div class="widget-title">
-                                <h4>Site Links</h4>
-                                <hr>
-                            </div>
-                            <!-- end widget-title -->
-
-                            <div class="links-widget m30">
-                                <ul class="check">
-                                    <li><a href="#">Homepage</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Our Vision</a></li>
-                                    <li><a href="#">Webmaster</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
-                            <!-- end links -->
+                           <?php if ( is_active_sidebar( 'footer-1' ) ) { ?>
+                                <?php dynamic_sidebar('footer-1'); ?>
+                            <?php } ?>
                         </div>
                         <!-- end widget -->
                     </div>
@@ -26,25 +13,9 @@
 
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="widget">
-                            <div class="widget-title">
-                                <h4>Latest Laptop</h4>
-                                <hr>
-                            </div>
-                            <!-- end widget-title -->
-
-                            <div class="links-widget m30">
-                                <ul class="check">
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    <li><a href="#">HP Notebook 15-ac192ne</a></li>
-                                    
-                                </ul>
-                            </div>
-                            <!-- end links -->
+                            <?php if ( is_active_sidebar( 'footer-2' ) ) { ?>
+                                <?php dynamic_sidebar('footer-2'); ?>
+                            <?php } ?>
                         </div>
                         <!-- end widget -->
                     </div>
